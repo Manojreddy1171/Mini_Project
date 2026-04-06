@@ -31,32 +31,32 @@ public class StudentMarksManager {
                         marks[i] = sc.nextInt();
                     }
                     dataEntered = true;
-                    System.out.println("✔ Marks entered successfully!");
+                    System.out.println(" Marks entered successfully!");
                     break;
 
                 case 2:
-                    if (!dataEntered) { System.out.println("⚠ Please enter marks first!"); break; }
+                    if (!dataEntered) { System.out.println(" Please enter marks first!"); break; }
                     System.out.println("\n--- Student Marks ---");
                     for (int i = 0; i < 5; i++)
                         System.out.println("Student " + (i + 1) + " : " + marks[i]);
                     break;
 
                 case 3:
-                    if (!dataEntered) { System.out.println("⚠ Please enter marks first!"); break; }
+                    if (!dataEntered) { System.out.println(" Please enter marks first!"); break; }
                     int total = 0;
                     for (int m : marks) total += m;
                     System.out.println("\nTotal Marks: " + total);
                     break;
 
                 case 4:
-                    if (!dataEntered) { System.out.println("⚠ Please enter marks first!"); break; }
+                    if (!dataEntered) { System.out.println(" Please enter marks first!"); break; }
                     int sum = 0;
                     for (int m : marks) sum += m;
                     System.out.printf("\nAverage Marks: %.2f%n", (double) sum / marks.length);
                     break;
 
                 case 5:
-                    if (!dataEntered) { System.out.println("⚠ Please enter marks first!"); break; }
+                    if (!dataEntered) { System.out.println(" Please enter marks first!"); break; }
                     int highest = marks[0];
                     for (int m : marks) if (m > highest) highest = m;
                     System.out.println("\nHighest Mark: " + highest);
@@ -67,7 +67,7 @@ public class StudentMarksManager {
                     break;
 
                 default:
-                    System.out.println("⚠ Invalid choice! Please enter 1–6.");
+                    System.out.println(" Invalid choice! Please enter 1–6.");
             }
         } while (choice != 6);
 
